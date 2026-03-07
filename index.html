@@ -936,13 +936,13 @@ footer {
     </div>
     <p class="ft-copy">&copy; 2026 Scriptome.AI. Co-produced with Merelogic.</p>
     <div class="ft-links">
-      <a href="/cdn-cgi/l/email-protection#62111617221101100b12160d0f074c030b">Contact</a>
+      <a href="mailto:stu@scriptome.ai">Contact</a>
       <a href="https://scriptome.ai">scriptome.ai</a>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // scroll reveal
 const obs = new IntersectionObserver(es => {
   es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } });
@@ -970,4 +970,9 @@ function doSignup(p) {
   };
   console.log('Waitlist signup:', data);
   // TODO: swap with HubSpot embed
-  document
+  document.getElementById(p=='h'?'hform':'bform').style.display='none';
+  document.getElementById(p+'-ok').style.display='block';
+}
+</script>
+</body>
+</html>
