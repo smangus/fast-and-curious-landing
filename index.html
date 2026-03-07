@@ -6,7 +6,7 @@
 <title>The Fast and the Curious — AI Upskilling for Biotech Scientists</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
 <style>
 :root {
   /* Brand */
@@ -29,7 +29,7 @@
   --border:     #D6D7D9;
   --border-lt:  #E8EAED;
 
-  --ff:  'Syne', sans-serif;
+  --ff:  'Roboto', sans-serif;
   --fb:  'Instrument Sans', sans-serif;
   --r:   10px;
   --rl:  18px;
@@ -128,8 +128,8 @@ nav.scrolled {box-shadow:0 2px 16px rgba(0,0,0,.08)}
 .h-title {
   font-family:var(--ff);
   font-size:clamp(2.8rem,5vw,4.6rem);
-  font-weight:800;line-height:.96;
-  letter-spacing:-.03em;color:var(--text-dark);
+  font-weight:900;line-height:1.02;
+  letter-spacing:-.02em;color:var(--text-dark);
   margin-bottom:8px;
   animation:up .5s .06s ease both;
 }
@@ -239,8 +239,8 @@ nav.scrolled {box-shadow:0 2px 16px rgba(0,0,0,.08)}
 .stitle {
   font-family:var(--ff);
   font-size:clamp(1.85rem,3vw,2.7rem);
-  font-weight:800;line-height:1.08;
-  letter-spacing:-.025em;
+  font-weight:700;line-height:1.14;
+  letter-spacing:-.015em;
   color:var(--text-dark);
   margin-bottom:14px;
 }
@@ -529,7 +529,7 @@ footer {
   width: 100% !important;
   background: #09C443 !important;
   color: #fff !important;
-  font-family: 'Syne', sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
   font-weight: 700 !important;
   font-size: .92rem !important;
   letter-spacing: .05em !important;
@@ -558,7 +558,7 @@ footer {
 .hs-form .submitted-message {
   text-align: center !important;
   padding: 20px 0 !important;
-  font-family: 'Syne', sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
   font-weight: 700 !important;
   color: #07A338 !important;
   font-size: 1rem !important;
@@ -936,13 +936,13 @@ footer {
     </div>
     <p class="ft-copy">&copy; 2026 Scriptome.AI. Co-produced with Merelogic.</p>
     <div class="ft-links">
-      <a href="mailto:stu@scriptome.ai">Contact</a>
+      <a href="/cdn-cgi/l/email-protection#62111617221101100b12160d0f074c030b">Contact</a>
       <a href="https://scriptome.ai">scriptome.ai</a>
     </div>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // scroll reveal
 const obs = new IntersectionObserver(es => {
   es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } });
@@ -970,9 +970,4 @@ function doSignup(p) {
   };
   console.log('Waitlist signup:', data);
   // TODO: swap with HubSpot embed
-  document.getElementById(p=='h'?'hform':'bform').style.display='none';
-  document.getElementById(p+'-ok').style.display='block';
-}
-</script>
-</body>
-</html>
+  document
