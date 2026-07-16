@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Get This Course Paid For &mdash; The Fast and the Curious</title>
+<meta name="description" content="Massachusetts biotech employees: your employer may be able to cover 100% of your tuition for The Fast and the Curious through the state's Workforce Training Fund Program."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --green:      #09C443;
+  --green-dark: #07A338;
+  --green-dim:  rgba(9,196,67,.1);
+  --green-glow: rgba(9,196,67,.18);
+  --blue:       #0195FF;
+  --orange:     #FE4A25;
+  --orange-dk:  #E03D1A;
+
+  --bg:         #FFFFFF;
+  --bg2:        #F5F7FA;
+  --bg3:        #EEF2F7;
+  --text:       #464B4F;
+  --text-dark:  #1A1E24;
+  --muted:      #5D6067;
+  --dim:        #8A909A;
+  --border:     #D6D7D9;
+  --border-lt:  #E8EAED;
+
+  --ff:  'Roboto', sans-serif;
+  --fb:  'Instrument Sans', sans-serif;
+  --r:   10px;
+  --rl:  18px;
+}
+*,*::before,*::after {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
+body {
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--fb);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+a {color:inherit;text-decoration:none}
+ul {list-style:none}
+
+.wrap {max-width:820px;margin:0 auto;padding:0 28px}
+.sec  {padding:64px 0}
+
+nav {
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.nav-i {
+  max-width:1100px;margin:0 auto;padding:0 28px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;
+}
+.nav-logo {font-family:var(--ff);font-weight:800;color:var(--text-dark);font-size:1.05rem}
+.back-link {
+  font-family:var(--fb);font-size:.88rem;color:var(--muted);
+  display:flex;align-items:center;gap:6px;transition:color .18s;
+}
+.back-link:hover {color:var(--text-dark)}
+
+.hero {
+  padding:72px 0 48px;
+  background:linear-gradient(165deg, #f8fffe 0%, #f0faf5 40%, #e8f4ff 100%);
+  text-align:center;
+}
+.eyebrow {
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--green-dim);color:var(--green-dark);
+  font-family:var(--ff);font-weight:700;font-size:.72rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:7px 14px;border-radius:20px;margin-bottom:20px;
+}
+h1 {
+  font-family:var(--ff);
+  font-size:clamp(2rem,4.2vw,3rem);
+  font-weight:800;line-height:1.12;
+  letter-spacing:-.02em;
+  color:var(--text-dark);
+  margin-bottom:18px;
+}
+h1 .g {color:var(--green)}
+.hero-sub {
+  font-size:1.08rem;color:var(--muted);
+  max-width:600px;margin:0 auto 30px;
+  line-height:1.7;
+}
+.hero-cta {
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--green);color:#fff;
+  font-family:var(--ff);font-weight:700;font-size:.95rem;
+  padding:15px 28px;border-radius:8px;
+  box-shadow:0 4px 14px rgba(9,196,67,.25);
+  transition:background .2s,transform .15s,box-shadow .2s;
+}
+.hero-cta:hover {background:var(--green-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(9,196,67,.32)}
+
+.slabel {
+  font-family:var(--ff);font-size:.7rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--green-dark);margin-bottom:10px;
+}
+h2 {
+  font-family:var(--ff);
+  font-size:clamp(1.5rem,2.6vw,2rem);
+  font-weight:700;line-height:1.2;
+  letter-spacing:-.01em;
+  color:var(--text-dark);
+  margin-bottom:14px;
+}
+.ssub {font-size:1rem;color:var(--muted);max-width:620px;line-height:1.75;margin-bottom:36px}
+
+.steps {display:flex;flex-direction:column;gap:20px}
+.step {
+  display:flex;gap:18px;
+  background:#fff;border:1px solid var(--border-lt);
+  border-radius:var(--rl);padding:26px 28px;
+}
+.step-num {
+  flex-shrink:0;
+  width:38px;height:38px;border-radius:50%;
+  background:var(--green-dim);color:var(--green-dark);
+  font-family:var(--ff);font-weight:800;font-size:1rem;
+  display:flex;align-items:center;justify-content:center;
+}
+.step h4 {font-family:var(--ff);font-size:1.02rem;color:var(--text-dark);margin-bottom:6px}
+.step p {font-size:.92rem;color:var(--muted);line-height:1.65}
+
+.numbers {
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  margin-bottom:8px;
+}
+.num-card {
+  background:var(--bg2);border-radius:var(--r);
+  padding:22px 20px;text-align:center;
+}
+.num-card .n {font-family:var(--ff);font-weight:800;font-size:1.7rem;color:var(--green);margin-bottom:4px}
+.num-card .l {font-size:.78rem;color:var(--muted);line-height:1.5}
+
+.script-box {
+  background:var(--bg2);border:1px solid var(--border-lt);
+  border-radius:var(--rl);padding:30px 32px;
+  margin-top:10px;
+}
+.script-box h4 {font-family:var(--ff);color:var(--text-dark);font-size:1rem;margin-bottom:14px}
+.script-body {
+  background:#fff;border:1px solid var(--border-lt);border-radius:var(--r);
+  padding:20px 22px;font-size:.9rem;color:var(--text);line-height:1.75;
+  white-space:pre-line;
+}
+
+.note {
+  font-size:.84rem;color:var(--dim);line-height:1.7;
+  border-top:1px solid var(--border-lt);
+  padding-top:24px;margin-top:8px;
+}
+.note a {color:var(--green-dark);text-decoration:underline}
+
+.cta-band {
+  background:var(--bg2);text-align:center;padding:56px 0;
+}
+.cta-band h2 {margin-bottom:10px}
+.cta-band .ssub {margin-left:auto;margin-right:auto}
+.cta-row {display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-primary {
+  background:var(--green);color:#fff;
+  font-family:var(--ff);font-weight:700;font-size:.92rem;
+  padding:14px 26px;border-radius:8px;
+  transition:background .2s,transform .15s;
+}
+.btn-primary:hover {background:var(--green-dark);transform:translateY(-2px)}
+.btn-outline {
+  background:transparent;color:var(--green-dark);
+  border:2px solid var(--green);
+  font-family:var(--ff);font-weight:700;font-size:.92rem;
+  padding:12px 24px;border-radius:8px;
+  transition:background .2s;
+}
+.btn-outline:hover {background:var(--green-dim)}
+
+footer {
+  padding:28px 0;text-align:center;
+  font-size:.8rem;color:var(--dim);
+}
+
+@media(max-width:640px){
+  .numbers {grid-template-columns:1fr}
+  .step {flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-i">
+    <div class="nav-logo">The Fast &amp; The Curious</div>
+    <a href="index.html" class="back-link">&larr; Back to course details</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">For Massachusetts Biotech Employees</div>
+    <h1>Your tuition can be <span class="g">100% covered</span> &mdash; by the state, not by you.</h1>
+    <p class="hero-sub">Massachusetts runs a program built for exactly this: helping small and mid-size biotech employers pay for training like The Fast and the Curious. You don't need a scholarship. You need five minutes with your manager.</p>
+    <a href="#make-the-ask" class="hero-cta">See how to bring this to your employer &rarr;</a>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="slabel">The Opportunity</div>
+    <h2>Meet the Workforce Training Fund Program</h2>
+    <p class="ssub">The Massachusetts Workforce Training Fund Program (WTFP) Express Grant exists so companies like yours can invest in employee skills without eating the cost. It's funded by employer contributions the state already collects &mdash; your company may already be paying into it.</p>
+
+    <div class="numbers">
+      <div class="num-card"><div class="n">100%</div><div class="l">of tuition covered for employers with 1&ndash;50 MA employees</div></div>
+      <div class="num-card"><div class="n">50%</div><div class="l">covered for employers with 51&ndash;100 MA employees</div></div>
+      <div class="num-card"><div class="n">~21 days</div><div class="l">typical turnaround from application to grant award</div></div>
+    </div>
+  </div>
+</section>
+
+<div style="height:1px;background:var(--border-lt)"></div>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="slabel">How It Works</div>
+    <h2>Three steps to a fully-funded seat</h2>
+    <p class="ssub">The application is submitted by your employer, not by you &mdash; which means your job is just to get the ball rolling.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h4>Check the basics</h4>
+          <p>Your company is likely eligible if it's based in Massachusetts, has 100 or fewer MA employees, and pays into the state unemployment insurance system &mdash; which is standard for nearly every MA employer.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h4>Bring it to your manager or HR/L&amp;D</h4>
+          <p>Pitch it as what it is: a way to build in-demand AI skills on your team's roadmap, at little to no cost to the company. Use the talking points below to make the ask easy.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h4>Your employer applies &mdash; ahead of the cohort start</h4>
+          <p>Your company (not you) submits the Express Grant application to Commonwealth Corporation, the state agency that administers the fund. Because training can only begin after the grant is awarded, the sooner this starts, the better &mdash; so raise it now rather than the week before the cohort kicks off.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="height:1px;background:var(--border-lt)"></div>
+
+<section class="sec" id="make-the-ask">
+  <div class="wrap">
+    <div class="slabel">Make The Ask</div>
+    <h2>You're the best advocate for your own development</h2>
+    <p class="ssub">Nobody knows better than you that this training moves the needle on your work. Here's a short message you can adapt and send to your manager or People team today.</p>
+
+    <div class="script-box">
+      <h4>Sample message to your manager</h4>
+      <div class="script-body">Hi [Manager] &mdash; I found an 8-week hands-on AI upskilling program built specifically for bench scientists (The Fast and the Curious, $2,500, biotech-specific curriculum covering protein structure prediction, molecular design, and more).
+
+I'd love to enroll, and I think we can get it fully or mostly covered by the state: Massachusetts' Workforce Training Fund Program (Express Grant) reimburses eligible MA employers 100% of training costs like this for companies our size. The company applies (not me), and Commonwealth Corporation typically decides within about 3 weeks.
+
+Could we look into applying? I'm happy to pull together whatever details are needed &mdash; I just want to get the request in early since training can't start until the grant is approved.
+
+Program details: [link to course]
+State program details: commcorp.org/subprogram/wtfp-express-program</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to make the case?</h2>
+    <p class="ssub">Join the waitlist now so you have a cohort seat to point to when you make the ask &mdash; then loop in your employer right away.</p>
+    <div class="cta-row">
+      <a href="index.html#waitlist" class="btn-primary">Join the Waitlist</a>
+      <a href="https://commcorp.org/subprogram/wtfp-express-program/" target="_blank" rel="noopener" class="btn-outline">View Official Program Details</a>
+    </div>
+    <p class="note" style="max-width:600px;margin:28px auto 0;border-top:none;padding-top:0">Eligibility, reimbursement percentages, and award decisions are determined solely by Commonwealth Corporation, the Massachusetts agency that administers the Workforce Training Fund Program. Grants must be applied for and awarded before training begins; funds are capped at $15,000 per company per year and $3,000 per employee per course. The Fast and the Curious is not affiliated with Commonwealth Corporation or the Commonwealth of Massachusetts. Visit <a href="https://commcorp.org/subprogram/wtfp-express-program/" target="_blank" rel="noopener">commcorp.org</a> for current, authoritative program rules.</p>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 The Fast and the Curious. <a href="index.html" style="text-decoration:underline">Back to course details</a>
+</footer>
+
+</body>
+</html>

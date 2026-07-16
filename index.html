@@ -161,6 +161,21 @@ nav.scrolled {box-shadow:0 2px 16px rgba(0,0,0,.08)}
 .sl {font-size:.7rem;color:var(--dim);text-transform:uppercase;letter-spacing:.09em}
 .stat-div {width:1px;background:var(--border);align-self:stretch}
 
+.funding-cta {
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--green);color:#fff;
+  font-family:var(--ff);font-weight:700;font-size:.92rem;
+  letter-spacing:.02em;
+  padding:15px 26px;border-radius:8px;
+  margin-bottom:32px;
+  box-shadow:0 4px 14px rgba(9,196,67,.25);
+  animation:up .5s .2s ease both;
+  transition:background .2s,transform .15s,box-shadow .2s;
+}
+.funding-cta:hover {background:var(--green-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(9,196,67,.32)}
+.funding-cta .fc-arrow {transition:transform .15s}
+.funding-cta:hover .fc-arrow {transform:translateX(3px)}
+
 .h-logos {
   display:flex;align-items:center;gap:20px;flex-wrap:wrap;
   animation:up .5s .22s ease both;
@@ -298,7 +313,7 @@ nav.scrolled {box-shadow:0 2px 16px rgba(0,0,0,.08)}
 .ph-sub {font-size:.87rem;color:var(--muted)}
 .tbl-wrap {border-radius:var(--r);overflow:hidden;border:1px solid var(--border-lt)}
 .col-hdr {
-  display:grid;grid-template-columns:60px 1fr 1fr 1fr;
+  display:grid;grid-template-columns:60px 2fr 1fr;
   background:var(--bg3);
 }
 .col-hdr .wc {
@@ -309,7 +324,7 @@ nav.scrolled {box-shadow:0 2px 16px rgba(0,0,0,.08)}
 }
 .col-hdr .wc:last-child {border-right:none}
 .wrow {
-  display:grid;grid-template-columns:60px 1fr 1fr 1fr;
+  display:grid;grid-template-columns:60px 2fr 1fr;
   background:#fff;border-top:1px solid var(--border-lt);
   transition:background .15s;
 }
@@ -319,7 +334,6 @@ nav.scrolled {box-shadow:0 2px 16px rgba(0,0,0,.08)}
 .wc.num {font-family:var(--ff);font-weight:800;color:var(--green);font-size:.9rem;display:flex;align-items:center}
 .wc.topic {font-weight:500;color:var(--text-dark)}
 .wc.fmt {color:var(--muted);font-size:.8rem}
-.wc.del {color:var(--muted);font-size:.8rem}
 
 /* ─ WHY DIFFERENT ─ */
 .diff-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:44px}
@@ -484,7 +498,7 @@ footer {
   .wcard {max-width:440px}
   .prob-grid,.out-grid,.diff-grid,.price-grid,.inst-grid {grid-template-columns:1fr}
   .col-hdr,.wrow {grid-template-columns:52px 1fr}
-  .wc.fmt,.wc.del,.col-hdr .wc:nth-child(3),.col-hdr .wc:nth-child(4) {display:none}
+  .wc.fmt,.col-hdr .wc:nth-child(3) {display:none}
   .nav-links {display:none}
 }
 @media(max-width:580px){
@@ -601,7 +615,7 @@ footer {
       <div class="h-eyebrow"><span class="h-eyebrow-dot"></span>For Bench Scientists &mdash; Pilot Cohort Q3 2026</div>
       <h1 class="h-title">The <span class="g">Fast</span><br/>and the<br/><span class="g">Curious</span></h1>
       <p class="h-sub">AI Upskilling Built for Bench Scientists</p>
-      <p class="h-desc">An 8-week, hands-on program that transforms bench scientists into confident AI practitioners &mdash; no CS degree required. Predict protein structures, design molecules with generative AI, and build a real portfolio.</p>
+      <p class="h-desc">An 8-week, hands-on program that is taught in-person in Cambridge, Massachusetts, transforming a cohort of driven bench scientists into confident AI practitioners &mdash; no CS degree required. Predict protein structures, design molecules with generative AI, and learn how to use a full spectrum of AI-powered drug development tools for the next generation of drug development.</p>
 
       <div class="h-stats">
         <div class="stat"><span class="sn">8</span><span class="sl">Weeks</span></div>
@@ -612,6 +626,8 @@ footer {
         <div class="stat-div"></div>
         <div class="stat"><span class="sn">20</span><span class="sl">Max cohort</span></div>
       </div>
+
+      <a href="funding.html" class="funding-cta">Find out how to take this course at NO COST TO YOU <span class="fc-arrow">&rarr;</span></a>
 
       <div class="h-logos">
         <span style="font-size:.85rem">Brought to you by</span>
@@ -677,14 +693,14 @@ footer {
   <div class="wrap">
     <div class="tc">
       <div class="slabel rv">What You&rsquo;ll Learn</div>
-      <h2 class="stitle rv">Six skills. Eight weeks.<br/>Zero CS background required.</h2>
+      <h2 class="stitle rv">Eight skills. Eight weeks.<br/>Zero CS background required.</h2>
       <p class="ssub rv">Every module is built around real drug R&amp;D workflows. You leave with working skills &mdash; not just a certificate.</p>
     </div>
     <div class="out-grid">
       <div class="out-card rv">
         <div class="wk-tag">Weeks 1&ndash;2</div>
-        <h4>Protein Structure Prediction</h4>
-        <p>Use Boltz and AlphaFold hands-on. Build a structure prediction portfolio piece using your own research targets &mdash; no coding required.</p>
+        <h4>Protein Structure &amp; Binding Prediction</h4>
+        <p>Use Boltz and OpenFold hands-on, building your competency in leveraging these powerful drug development tools.</p>
       </div>
       <div class="out-card rv">
         <div class="wk-tag">Week 3</div>
@@ -708,8 +724,8 @@ footer {
       </div>
       <div class="out-card rv">
         <div class="wk-tag">Weeks 7&ndash;8</div>
-        <h4>Vendor Evaluation &amp; Capstone</h4>
-        <p>Evaluate AI tools critically, then apply everything to a real problem from your own research for your final portfolio piece.</p>
+        <h4>Target ID and Virtual Cells</h4>
+        <p>Learn how to identify and prioritize promising drug targets, then explore virtual cell models that simulate biology to predict experimental outcomes before you run them.</p>
       </div>
     </div>
   </div>
@@ -730,10 +746,10 @@ footer {
         <span class="ph-sub">No-code tools &mdash; web interfaces &amp; Google Colab</span>
       </div>
       <div class="tbl-wrap">
-        <div class="col-hdr"><div class="wc">Week</div><div class="wc">Topic</div><div class="wc">Format</div><div class="wc">Deliverable</div></div>
-        <div class="wrow"><div class="wc num">01</div><div class="wc topic">AI Foundations for Drug Discovery</div><div class="wc fmt">In-person workshop</div><div class="wc del">AI readiness assessment</div></div>
-        <div class="wrow"><div class="wc num">02</div><div class="wc topic">Protein Structure Prediction (Boltz &amp; AlphaFold)</div><div class="wc fmt">Hands-on lab session</div><div class="wc del">Structure prediction portfolio piece</div></div>
-        <div class="wrow"><div class="wc num">03</div><div class="wc topic">Molecular Design with Generative AI</div><div class="wc fmt">Hands-on lab session</div><div class="wc del">Novel molecule design</div></div>
+        <div class="col-hdr"><div class="wc">Week</div><div class="wc">Topic</div><div class="wc">Format</div></div>
+        <div class="wrow"><div class="wc num">01</div><div class="wc topic">AI Foundations for Drug Discovery</div><div class="wc fmt">In-person workshop</div></div>
+        <div class="wrow"><div class="wc num">02</div><div class="wc topic">Protein Structure &amp; Binding Prediction (Boltz &amp; OpenFold)</div><div class="wc fmt">Hands-on lab session</div></div>
+        <div class="wrow"><div class="wc num">03</div><div class="wc topic">Molecular Design with Generative AI</div><div class="wc fmt">Hands-on lab session</div></div>
       </div>
     </div>
 
@@ -743,10 +759,10 @@ footer {
         <span class="ph-sub">Low-code Python notebooks &mdash; copy / paste / modify</span>
       </div>
       <div class="tbl-wrap">
-        <div class="col-hdr"><div class="wc">Week</div><div class="wc">Topic</div><div class="wc">Format</div><div class="wc">Deliverable</div></div>
-        <div class="wrow"><div class="wc num">04</div><div class="wc topic">ADMET Prediction &amp; Drug-Likeness</div><div class="wc fmt">Online + office hours</div><div class="wc del">Compound evaluation report</div></div>
-        <div class="wrow"><div class="wc num">05</div><div class="wc topic">Literature Mining with LLMs</div><div class="wc fmt">Hands-on lab session</div><div class="wc del">Research gap analysis</div></div>
-        <div class="wrow"><div class="wc num">06</div><div class="wc topic">Data Analysis &amp; Visualization</div><div class="wc fmt">Online + practice</div><div class="wc del">Data visualization project</div></div>
+        <div class="col-hdr"><div class="wc">Week</div><div class="wc">Topic</div><div class="wc">Format</div></div>
+        <div class="wrow"><div class="wc num">04</div><div class="wc topic">ADMET Prediction &amp; Drug-Likeness</div><div class="wc fmt">Hands-on lab session</div></div>
+        <div class="wrow"><div class="wc num">05</div><div class="wc topic">Literature Mining with LLMs</div><div class="wc fmt">Hands-on lab session</div></div>
+        <div class="wrow"><div class="wc num">06</div><div class="wc topic">Data Analysis &amp; Visualization</div><div class="wc fmt">In-person workshop</div></div>
       </div>
     </div>
 
@@ -756,9 +772,9 @@ footer {
         <span class="ph-sub">Real projects, industry panel &amp; capstone showcase</span>
       </div>
       <div class="tbl-wrap">
-        <div class="col-hdr"><div class="wc">Week</div><div class="wc">Topic</div><div class="wc">Format</div><div class="wc">Deliverable</div></div>
-        <div class="wrow"><div class="wc num">07</div><div class="wc topic">AI Tool Evaluation &amp; Vendor Selection</div><div class="wc fmt">Workshop + case studies</div><div class="wc del">Vendor evaluation rubric</div></div>
-        <div class="wrow"><div class="wc num">08</div><div class="wc topic">Capstone Project Presentations</div><div class="wc fmt">In-person showcase</div><div class="wc del">Final portfolio presentation</div></div>
+        <div class="col-hdr"><div class="wc">Week</div><div class="wc">Topic</div><div class="wc">Format</div></div>
+        <div class="wrow"><div class="wc num">07</div><div class="wc topic">Target Identification</div><div class="wc fmt">Workshop + case studies</div></div>
+        <div class="wrow"><div class="wc num">08</div><div class="wc topic">Working with Virtual Cells</div><div class="wc fmt">In-person workshop</div></div>
       </div>
     </div>
   </div>
@@ -772,10 +788,10 @@ footer {
     <div class="diff-grid">
       <div class="diff-card rv"><div class="di">&#127919;</div><div><h4>Problem-First, Not Theory-First</h4><p>We start with &ldquo;how do I predict this protein structure?&rdquo; not &ldquo;what is a neural network?&rdquo; Theory only when you need it to solve a real problem.</p></div></div>
       <div class="diff-card rv"><div class="di">&#128200;</div><div><h4>No-Code to Low-Code Progression</h4><p>Weeks 1&ndash;3: web interfaces only. Weeks 4&ndash;6: Python notebooks (copy/paste). Weeks 7&ndash;8: customize. Confidence builds naturally.</p></div></div>
-      <div class="diff-card rv"><div class="di">&#128300;</div><div><h4>Bring Your Own Research Problem</h4><p>Apply every tool to challenges from your actual job. Peer learning across therapeutic areas. Your capstone impresses your current employer.</p></div></div>
+      <div class="diff-card rv"><div class="di">&#128300;</div><div><h4>Bring Your Own Research Problem</h4><p>Learn AI tool competencies that you can bring back to your employer and apply to company research problems. These competencies will build capability for your current employer and these skills can be taken with you wherever you go in your career as well.</p></div></div>
       <div class="diff-card rv"><div class="di">&#128737;</div><div><h4>Vendor-Agnostic &amp; Open-Source</h4><p>We teach critical evaluation, not platform dependence. No lock-in, no upsells. Everything runs on free-tier tools including Google Colab.</p></div></div>
       <div class="diff-card rv"><div class="di">&#127981;</div><div><h4>Industry Guest Instructors</h4><p>Real data scientists and AI leads from MA biotechs join as guest instructors. Hear what companies actually want &mdash; from the people doing the hiring.</p></div></div>
-      <div class="diff-card rv"><div class="di">&#9889;</div><div><h4>50%+ Hands-On Time</h4><p>Every concept is demonstrated with real drug discovery tools. Fail-forward culture. Real datasets, real problems, real portfolio pieces.</p></div></div>
+      <div class="diff-card rv"><div class="di">&#9889;</div><div><h4>50%+ Hands-On Time</h4><p>Every concept is demonstrated with real drug discovery tools. Fail-forward culture. Real datasets, real problems.</p></div></div>
     </div>
   </div>
 </section>
