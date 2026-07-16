@@ -161,6 +161,21 @@ nav.scrolled {box-shadow:0 2px 16px rgba(0,0,0,.08)}
 .sl {font-size:.7rem;color:var(--dim);text-transform:uppercase;letter-spacing:.09em}
 .stat-div {width:1px;background:var(--border);align-self:stretch}
 
+.funding-cta {
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--green);color:#fff;
+  font-family:var(--ff);font-weight:700;font-size:.92rem;
+  letter-spacing:.02em;
+  padding:15px 26px;border-radius:8px;
+  margin-bottom:32px;
+  box-shadow:0 4px 14px rgba(9,196,67,.25);
+  animation:up .5s .2s ease both;
+  transition:background .2s,transform .15s,box-shadow .2s;
+}
+.funding-cta:hover {background:var(--green-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(9,196,67,.32)}
+.funding-cta .fc-arrow {transition:transform .15s}
+.funding-cta:hover .fc-arrow {transform:translateX(3px)}
+
 .h-logos {
   display:flex;align-items:center;gap:20px;flex-wrap:wrap;
   animation:up .5s .22s ease both;
@@ -612,6 +627,8 @@ footer {
         <div class="stat-div"></div>
         <div class="stat"><span class="sn">20</span><span class="sl">Max cohort</span></div>
       </div>
+
+      <a href="funding.html" class="funding-cta">Find out how to take this course for NO COST TO YOU <span class="fc-arrow">&rarr;</span></a>
 
       <div class="h-logos">
         <span style="font-size:.85rem">Brought to you by</span>
