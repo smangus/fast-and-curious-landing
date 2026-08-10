@@ -145,6 +145,7 @@ nav.scrolled {box-shadow:0 2px 16px rgba(0,0,0,.08)}
   max-width:480px;line-height:1.78;margin-bottom:28px;
   animation:up .5s .14s ease both;
 }
+.h-cta-group {display:inline-block;max-width:100%}
 .h-stats {
   display:flex;gap:24px;flex-wrap:wrap;
   margin-bottom:32px;
@@ -162,7 +163,8 @@ nav.scrolled {box-shadow:0 2px 16px rgba(0,0,0,.08)}
 .stat-div {width:1px;background:var(--border);align-self:stretch}
 
 .funding-cta {
-  display:inline-flex;align-items:center;gap:10px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;
   background:var(--green);color:#fff;
   font-family:var(--ff);font-weight:700;font-size:.92rem;
   letter-spacing:.02em;
@@ -617,17 +619,19 @@ footer {
       <p class="h-sub">AI Upskilling Built for Bench Scientists</p>
       <p class="h-desc">An 8-week, hands-on program that is taught in-person in Cambridge, Massachusetts, transforming a cohort of driven bench scientists into confident AI practitioners &mdash; no CS degree required. Predict protein structures, design molecules with generative AI, and learn how to use a full spectrum of AI-powered drug development tools for the next generation of drug development.</p>
 
-      <div class="h-stats">
-        <div class="stat"><span class="sn">8</span><span class="sl">Weeks</span></div>
-        <div class="stat-div"></div>
-        <div class="stat"><span class="sn">~5 hrs</span><span class="sl">Per week</span></div>
-        <div class="stat-div"></div>
-        <div class="stat"><span class="sn">$2,500</span><span class="sl">Full program</span></div>
-        <div class="stat-div"></div>
-        <div class="stat"><span class="sn">20</span><span class="sl">Max cohort</span></div>
-      </div>
+      <div class="h-cta-group">
+        <div class="h-stats">
+          <div class="stat"><span class="sn">8</span><span class="sl">Weeks</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="sn">~5 hrs</span><span class="sl">Per week</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="sn">$2,500</span><span class="sl">Full program</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="sn">20</span><span class="sl">Max cohort</span></div>
+        </div>
 
-      <a href="funding.html" class="funding-cta">Find out how to take this course at NO COST TO YOU <span class="fc-arrow">&rarr;</span></a>
+        <a href="funding.html" class="funding-cta">Find out how to take this course at NO COST TO YOU <span class="fc-arrow">&rarr;</span></a>
+      </div>
 
       <div class="h-logos">
         <span style="font-size:.85rem">Brought to you by</span>
