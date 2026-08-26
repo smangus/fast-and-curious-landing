@@ -1,13 +1,13 @@
 {
   "id": "cohort-1",
   "name": "Pilot Cohort",
-  "startDate": "2027-01-TBD",
+  "startDate": "2027-01-22",
   "venue": {
     "name": "TBD",
     "address": "TBD, Cambridge, MA",
     "mapUrl": "TBD"
   },
-  "sessionTime": { "start": "TBD", "end": "TBD" },
+  "sessionTime": { "start": "12:00 PM", "end": "5:00 PM" },
   "links": {
     "slack": "https://ai-upskilling-course.slack.com",
     "github": "https://github.com/smangus",
