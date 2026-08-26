@@ -37,3 +37,9 @@ export function getAllWeekNumbers(): number[] {
     .map((f) => parseInt(f.slice(5, 7), 10))
     .sort((a, b) => a - b);
 }
+
+export function getAllWeeksContent(): WeekContent[] {
+  return getAllWeekNumbers()
+    .map((week) => getWeekContent(week))
+    .filter((w): w is WeekContent => w !== null);
+}

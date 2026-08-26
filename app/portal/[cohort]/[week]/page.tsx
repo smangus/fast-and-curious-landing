@@ -31,6 +31,7 @@ export default async function WeekPage({ params }: PageProps) {
   const hasDeliverable = !!frontmatter.deliverable;
   const hasReferences = frontmatter.references && frontmatter.references.length > 0;
   const hasSlides = !!frontmatter.slidesUrl;
+  const hasMaterials = !!(frontmatter.colabUrl || frontmatter.workbookUrl || hasSlides);
 
   return (
     <main>
@@ -88,6 +89,7 @@ export default async function WeekPage({ params }: PageProps) {
         </section>
       )}
 
+      {hasMaterials && (
       <section className="block">
         <div className="wrap">
           <h2>Materials</h2>
@@ -120,6 +122,7 @@ export default async function WeekPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+      )}
 
       {hasDeliverable && (
         <section className="block">

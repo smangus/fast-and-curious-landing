@@ -1,4 +1,4 @@
-import { WeekState } from './types';
+import { WeekContent, WeekState } from './types';
 
 const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -50,4 +50,31 @@ export function getWeekState(sessionDate: string | undefined | null, today: Date
   const sessionMidnight = new Date(d.getFullYear(), d.getMonth(), d.getDate());
   if (sessionMidnight.getTime() === todayMidnight.getTime()) return 'current';
   return sessionMidnight < todayMidnight ? 'past' : 'upcoming';
+}
+
+export type CohortPhase = 'pre-start' | 'during' | 'post-end';
+
+export interface CohortStatus {
+  phase: CohortPhase;
+  currentWeek: WeekContent | null;
+  nextWeek: WeekContent | null;
+}
+
+export function getCohortStatus(weeks: WeekContent[], today: Date = new Date()): CohortStatus {
+  const todayMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const withRealDates = weeks
+    .map((w) => ({ week: w, date: parseDate(w.frontmatter.sessionDate) }))
+    .filter((w): w is { week: WeekContent; date: Date } => w.date !== null)
+    .sort((a, b) => a.date.getTime() - b.date.getTime());
+
+  const occurred = withRealDates.filter(({ date }) => date <= todayMidnight);
+  const upcoming = withRealDates.filter(({ date }) => date > todayMidnight);
+
+  if (occurred.length === 0) {
+    return { phase: 'pre-start', currentWeek: null, nextWeek: upcoming[0]?.week ?? weeks[0] ?? null };
+  }
+  if (upcoming.length === 0) {
+    return { phase: 'post-end', currentWeek: occurred[occurred.length - 1].week, nextWeek: null };
+  }
+  return { phase: 'during', currentWeek: occurred[occurred.length - 1].week, nextWeek: upcoming[0].week };
 }
