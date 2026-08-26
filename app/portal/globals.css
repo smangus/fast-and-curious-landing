@@ -1,0 +1,249 @@
+.portal {
+  --green: #09c443;
+  --green-dark: #07a338;
+  --green-dim: rgba(9, 196, 67, 0.1);
+  --green-glow: rgba(9, 196, 67, 0.18);
+  --blue: #0195ff;
+  --orange: #fe4a25;
+  --orange-dk: #e03d1a;
+
+  --bg: #ffffff;
+  --bg2: #f5f7fa;
+  --bg3: #eef2f7;
+  --text: #464b4f;
+  --text-dark: #1a1e24;
+  --muted: #5d6067;
+  --dim: #8a909a;
+  --border: #d6d7d9;
+  --border-lt: #e8eaed;
+
+  --ff: 'Roboto', sans-serif;
+  --fb: 'Instrument Sans', sans-serif;
+  --r: 10px;
+  --rl: 18px;
+
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--fb);
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+.portal * {
+  box-sizing: border-box;
+}
+
+.portal a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.portal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.portal .wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Status / header banner */
+.portal .banner {
+  background: linear-gradient(165deg, #f8fffe 0%, #f0faf5 40%, #e8f4ff 100%);
+  border-bottom: 1px solid var(--border-lt);
+  padding: 32px 0;
+}
+
+/* Week header */
+.portal .week-header {
+  padding: 40px 0 24px;
+  border-bottom: 1px solid var(--border-lt);
+}
+
+.portal .eyebrow {
+  font-family: var(--ff);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-dark);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.portal h1 {
+  font-family: var(--fb);
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-weight: 500;
+  color: var(--text-dark);
+  margin: 0 0 12px;
+}
+
+.portal .meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.portal .meta-row span strong {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* Sections */
+.portal section.block {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border-lt);
+}
+
+.portal section.block:last-of-type {
+  border-bottom: none;
+}
+
+.portal h2 {
+  font-family: var(--ff);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 16px;
+}
+
+.portal .prework-card {
+  background: var(--green-dim);
+  border: 1px solid rgba(9, 196, 67, 0.25);
+  border-radius: var(--r);
+  padding: 20px 22px;
+}
+
+.portal .prework-time {
+  display: inline-block;
+  font-family: var(--ff);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--green-dark);
+  background: #fff;
+  border-radius: 999px;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+}
+
+.portal .prework-card p {
+  margin: 0 0 10px;
+}
+
+.portal .prework-card p:last-child {
+  margin-bottom: 0;
+}
+
+.portal .outcomes li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.portal .outcomes li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--green);
+}
+
+/* Materials buttons */
+.portal .materials-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.portal .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--fb);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: background 0.18s, transform 0.15s, box-shadow 0.2s;
+}
+
+.portal .btn-primary {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
+}
+
+.portal .btn-primary:hover {
+  background: var(--orange-dk);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(254, 74, 37, 0.3);
+}
+
+.portal .btn-secondary {
+  background: #fff;
+  color: var(--text-dark);
+}
+
+.portal .btn-secondary:hover {
+  background: var(--bg2);
+}
+
+/* Deliverable */
+.portal .deliverable-card {
+  background: var(--bg2);
+  border-radius: var(--r);
+  padding: 20px 22px;
+}
+
+.portal .deliverable-due {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Going further */
+.portal .references li {
+  margin-bottom: 8px;
+}
+
+.portal .references a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+/* Prose body from MDX */
+.portal .prose p {
+  margin: 0 0 12px;
+}
+
+.portal .prose p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .portal .wrap {
+    padding: 0 16px;
+  }
+
+  .portal .materials-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .portal .btn {
+    justify-content: center;
+  }
+}

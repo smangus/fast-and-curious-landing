@@ -1,0 +1,16 @@
+{
+  "id": "cohort-1",
+  "name": "Pilot Cohort",
+  "startDate": "2027-01-TBD",
+  "venue": {
+    "name": "TBD",
+    "address": "TBD, Cambridge, MA",
+    "mapUrl": "TBD"
+  },
+  "sessionTime": { "start": "TBD", "end": "TBD" },
+  "links": {
+    "slack": "TBD",
+    "github": "https://github.com/smangus",
+    "officeHours": "TBD"
+  }
+}
